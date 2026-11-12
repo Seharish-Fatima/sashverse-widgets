@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>serotonin and sabotage</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 6px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        font-family: Georgia, "Times New Roman", serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .playlist-card {
+        width: 430px;
+        max-width: 100%;
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 15px 18px 15px 16px;
+        color: #eee3d5;
+        text-decoration: none;
+        border: 2px solid #393533;
+        border-radius: 12px;
+        background: linear-gradient(
+          118deg,
+          #252323 0%,
+          #1e1d1c 58%,
+          #252322 100%
+        );
+        box-shadow:
+          inset 0 0 0 1px #ffffff04,
+          0 3px 12px #00000020;
+        transition:
+          border-color 160ms ease,
+          box-shadow 160ms ease;
+      }
+      .playlist-card:hover {
+        border-color: #67516b;
+        box-shadow:
+          inset 0 0 0 1px #ffffff04,
+          0 3px 16px #00000035;
+      }
+      .playlist-card:focus-visible {
+        outline: 2px solid #bd96ca;
+        outline-offset: 2px;
+      }
+      .cover {
+        width: 86px;
+        height: 86px;
+        flex: 0 0 auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow:
+          0 0 0 1px #d8acdf14,
+          0 2px 7px #00000050;
+      }
+      .details {
+        flex: 1;
+        min-width: 0;
+      }
+      .title {
+        display: block;
+        margin-bottom: 17px;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-shadow: 0 1px 2px #00000060;
+      }
+      .controls {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+      .icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+      }
+      .play {
+        width: 34px;
+        height: 34px;
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        border: 1px solid #fbf2e4;
+        border-radius: 50%;
+        color: #242120;
+        background: #e9ddce;
+        box-shadow: 0 1px 4px #00000055;
+      }
+      .play svg {
+        width: 16px;
+        height: 16px;
+        margin-left: 2px;
+      }
+      .volume {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-left: auto;
+      }
+      .volume .icon {
+        width: 18px;
+        height: 18px;
+      }
+      .rail {
+        display: block;
+        position: relative;
+        width: 77px;
+        height: 3px;
+        border-radius: 3px;
+        background: linear-gradient(to right, #e5d7c7 0 55%, #4c4643 55% 100%);
+        box-shadow: 0 1px 1px #00000050;
+      }
+      .rail::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #f0e1d0;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 1px 3px #00000055;
+      }
+      @media (max-width: 405px) {
+        .playlist-card {
+          gap: 17px;
+          padding: 14px;
+          min-height: 108px;
+        }
+        .cover {
+          width: 74px;
+          height: 74px;
+        }
+        .title {
+          font-size: 17px;
+          margin-bottom: 15px;
+        }
+        .controls {
+          gap: 14px;
+        }
+        .rail {
+          width: 57px;
+        }
+      }
+      @media (max-width: 340px) {
+        .playlist-card {
+          gap: 13px;
+          padding: 12px;
+          min-height: 98px;
+        }
+        .cover {
+          width: 64px;
+          height: 64px;
+        }
+        .title {
+          font-size: 15px;
+          margin-bottom: 12px;
+        }
+        .controls {
+          gap: 11px;
+        }
+        .play {
+          width: 30px;
+          height: 30px;
+        }
+        .volume {
+          gap: 5px;
+        }
+        .rail {
+          width: 37px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .playlist-card {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a
+      class="playlist-card"
+      href="https://open.spotify.com/playlist/1kpT2D9mJSt6zECF8dCKX5"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Open serotonin and sabotage in Spotify (new tab)"
+      title="Open playlist in Spotify"
+    >
+      <img class="cover" src="image.png" />
+      <div class="details">
+        <span class="title">serotonin and sabotage</span>
+        <div class="controls" aria-hidden="true">
+          <svg
+            class="icon"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            focusable="false"
+          >
+            <path d="M3 3h2.4v14H3zM16.6 3.3v13.4L6.3 10z" />
+          </svg>
+          <span class="play">
+            <svg viewBox="0 0 20 20" fill="currentColor" focusable="false">
+              <path d="M4 1.8 17 10 4 18.2z" />
+            </svg>
+          </span>
+          <svg
+            class="icon"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            focusable="false"
+          >
+            <path d="M14.6 3H17v14h-2.4zM3.4 3.3 13.7 10 3.4 16.7z" />
+          </svg>
+          <span class="volume">
+            <svg class="icon" viewBox="0 0 24 24" focusable="false">
+              <path fill="currentColor" d="M3 8h4l5-4v16l-5-4H3z" />
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                d="M15.5 8a7 7 0 0 1 0 8M18.5 5a11 11 0 0 1 0 14"
+              />
+            </svg>
+            <span class="rail"></span>
+          </span>
+        </div>
+      </div>
+    </a>
+  </body>
+</html>
